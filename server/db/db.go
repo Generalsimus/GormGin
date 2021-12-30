@@ -10,10 +10,6 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-// type DbInstance struct {
-// 	Db *gorm.DB
-// }
-
 var Database *gorm.DB
 
 func ConnectDb() {
@@ -30,7 +26,4 @@ func ConnectDb() {
 
 	db.AutoMigrate(&model.User{})
 	Database = db
-	// Database = DbInstance{
-	// 	Db: db,
-	// }
 }
